@@ -9,13 +9,14 @@
   <body>
     <section>
       <div class="buttons">
-        <button id="myButton1">#01426C</button>
-        <button id="myButton2">#95E61D</button>
+        <div class="mybutton"><button id="myButton1" style="background-color: black; color: white;">#01426C</button></div>
+        <div class="mybuttons2"><button id="myButton2" style="background-color: yellow;">#95E61D</button></div>
       </div>
-      <h2>Click on Code to Copy</h2>
-      <div class="copyCode">
-        background-image:
-        liner-gradient(to-right, #01426C, #95E61D)
+      <h2>Click on code to copy</h2>
+      <div class="box">
+        <div class="copyCode">
+          background-image: liner-gradient(to-right , #01426C , #95E61D)
+        </div>
       </div>
     </section>
 
@@ -39,23 +40,23 @@
         rgb1 = hexValues();
         console.log(rgb1);
         btn1.innerHTML = rgb1;
-        document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
-        copyDiv.innerHTML = ` background-image: liner-gradient(to-right, ${rgb1}, ${rgb2})`;
+        document.body.style.backgroundImage = `linear-gradient(to right , ${rgb1} , ${rgb2})`;
+        copyDiv.innerHTML = ` background-image: liner-gradient(to-right , ${rgb1} , ${rgb2})`;
       };
 
       const handleButton2 = () => {
         rgb2 = hexValues();
         console.log(rgb2);
         btn2.innerHTML = rgb2;
-        document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
-        copyDiv.innerHTML = ` background-image: liner-gradient(to-right, ${rgb1}, ${rgb2})`;
+        document.body.style.backgroundImage = `linear-gradient(to right , ${rgb1} , ${rgb2})`;
+        copyDiv.innerHTML = ` background-image: liner-gradient(to-right , ${rgb1} , ${rgb2})`;
       };
       btn1.addEventListener("click", handleButton1);
       btn2.addEventListener("click", handleButton2);
 
       copyDiv.addEventListener("click", () => {
         navigator.clipboard.writeText(copyDiv.innerText);
-        alert("Code Copied to your Clipboard")
+        alert("Code Copied to your Clipboard");
       });
     </script>
   </body>
